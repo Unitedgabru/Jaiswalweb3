@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -11,46 +11,44 @@ const poppins = Poppins({
   display: "swap",
 });
 
+/* 🔹 CHANGE ONLY THIS PART LATER */
 export const metadata: Metadata = {
-  title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-  description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products that balance user needs and business goals. 3+ years of industry experience.",
+  title: "Your Name – Software Engineer & UI/UX Designer",
+  description:
+    "A self-taught Software Engineer and UI/UX Designer. I design and build modern, user-friendly digital experiences.",
   keywords: [
-    "Ibrahim Memon",
+    "Your Name",
     "Software Engineer",
     "UI/UX Designer",
     "Frontend Developer",
     "React Developer",
     "Next.js Developer",
-    "Web Designer",
-    "WebHR Engineer",
     "Portfolio",
   ],
-  authors: [{ name: "Ibrahim Memon" }],
-  creator: "Ibrahim Memon",
-  publisher: "Ibrahim Memon",
+  authors: [{ name: "Your Name" }],
+  creator: "Your Name",
+  publisher: "Your Name",
+
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ibiimemon.com",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products.",
-    siteName: "Ibrahim Memon Portfolio",
+    url: "https://yourdomain.vercel.app",
+    title: "Your Name – Software Engineer & UI/UX Designer",
+    description:
+      "Portfolio of Your Name – Software Engineer & UI/UX Designer.",
+    siteName: "Your Name Portfolio",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR.",
+    title: "Your Name – Software Engineer & UI/UX Designer",
+    description:
+      "Portfolio of Your Name – Software Engineer & UI/UX Designer.",
   },
+
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -62,17 +60,17 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://ibiimemon.com" />
+        {/* 🔹 CHANGE DOMAIN WHEN READY */}
+        <link rel="canonical" href="https://yourdomain.vercel.app" />
       </head>
-      <body
-        className={`${poppins.variable} font-sans antialiased`}
-      >
+
+      <body className={`${poppins.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
