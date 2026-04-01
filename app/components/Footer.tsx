@@ -20,16 +20,16 @@ const socials = [
   {
     name: "Twitter",
     link: "https://twitter.com/",
-    icon: "/assets/twitter.webp",
+    icon: "/assets/twitter.svg",
   },
   {
     name: "Medium",
     link: "https://medium.com/",
-    icon: "/assets/medium.webp",
+    icon: "/assets/medium.svg",
   },
 ];
 
-export default function Footer() {
+export default function Footer(): React.JSX.Element {
   return (
     <footer className="py-10 border-t border-white/10">
       <div className="flex justify-center gap-6">
@@ -38,6 +38,7 @@ export default function Footer() {
             key={item.name}
             href={item.link}
             target="_blank"
+            rel="noopener noreferrer"
             className="opacity-70 hover:opacity-100 transition"
           >
             <Image
